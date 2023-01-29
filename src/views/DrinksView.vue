@@ -5,9 +5,9 @@
       <span>Drinks</span>
     </h1>
     
-    <div class="row g-2 mt-4">
+    <div class="row g-4 g-lg-3 mt-4">
       <div v-if="loading">loading...</div>
-      <div v-else v-for="cocktail in cocktails" class="col-12 col-md-6 col-lg-4 col-xxl-3 px-5 px-lg-2">
+      <div v-else v-for="cocktail in cocktails" class="col-12 col-md-6 col-lg-4 col-xxl-3 px-5 px-md-3 px-lg-2">
         <DrinksItem
           :id="cocktail.id"
           :name="cocktail.name"
