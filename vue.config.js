@@ -6,17 +6,19 @@ module.exports = defineConfig({
       navigateFallback: "/index.html",
       skipWaiting: true,
       clientsClaim: true,
-      runtimeCaching: [{
-        urlPattern: new RegExp('APU_URL'),
-        handler: "NetworkFirst",
-        options: {
-          networkTimeoutSeconds: 20,
-          cacheName: "api-cache",
-          cacheableResponse: {
-            statuses: [0, 200],
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp("^https?://(www.)?thecocktaildb.com.*"),
+          handler: "NetworkFirst",
+          options: {
+            networkTimeoutSeconds: 20,
+            cacheName: "api-cache",
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
           }
         }
-      }]
+      ]
     },
     manifestOptions: {
       name: "Drinker",
@@ -24,7 +26,7 @@ module.exports = defineConfig({
       msTileColor: "#2c2c54",
       appleMobileWebAppCapable: "yes",
       appleMobileWebAppStatusBarStyle: "#2c2c54",
-      background_color: "#fff",
+      background_color: "#fff"
     }
   }
 });
