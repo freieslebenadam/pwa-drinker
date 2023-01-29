@@ -2,6 +2,11 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   pwa: {
+    name: "Drinker",
+    theme_color: "#2c2c54",
+    msTileColor: "#2c2c54",
+    appleMobileWebAppCapable: "yes",
+    appleMobileWebAppStatusBarStyle: "#2c2c54",
     workboxOptions: {
       navigateFallback: "/index.html",
       skipWaiting: true,
@@ -26,7 +31,7 @@ module.exports = defineConfig({
       msTileColor: "#2c2c54",
       appleMobileWebAppCapable: "yes",
       appleMobileWebAppStatusBarStyle: "#2c2c54",
-      background_color: "#fff"
+      background_color: "#f0f0f0"
     }
   }
 });
