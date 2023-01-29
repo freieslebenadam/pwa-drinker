@@ -2,7 +2,7 @@
   <div id="app">
     <AppNavbar />
     
-    <main class="container-fluid container-md pt-4">
+    <main class="container-fluid container-md py-4">
       <router-view/>
     </main>
   </div>
