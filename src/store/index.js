@@ -9,7 +9,8 @@ export default new Vuex.Store({
   state: {
     loading: false,
     cocktails: [],
-    currentCocktail: null
+    currentCocktail: null,
+    offline: false
   },
   getters: {
   },
@@ -22,6 +23,9 @@ export default new Vuex.Store({
     },
     setCurrentCocktail(state, item) {
       state.currentCocktail = item;
+    },
+    setOffline(state, bool) {
+      state.offline = bool;
     }
   },
   actions: {
