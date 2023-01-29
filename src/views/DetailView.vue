@@ -28,6 +28,10 @@
         
         <p class="card-text text-muted">{{ cocktail.description }}</p>
         <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, architecto dicta earum eaque quos, qui facilis eveniet, fuga porro a dolores dolorum eum dolorem debitis iste eos ipsum inventore aliquam!</p>
+        
+        <ul class="list-group w-auto">
+          <li v-for="ingredient, index in cocktail.ingredients" class="list-group-item text-secondary fw-bold">{{ `${index + 1}. ${ingredient}` }}</li>
+        </ul>
       </div>
       <img :src="cocktail.image" alt="Drink image" class="d-block d-lg-none col-12 col-lg-6 rounded-bottom">
     </div>
